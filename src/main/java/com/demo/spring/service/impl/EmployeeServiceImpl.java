@@ -1,5 +1,5 @@
 package com.demo.spring.service.impl;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Service;
 
 import com.demo.spring.model.Employee;
@@ -10,8 +10,7 @@ import com.demo.spring.service.EmployeeService;
 public class EmployeeServiceImpl implements EmployeeService {
 	
 	private EmployeeRepository employeeRepository;
-	
-@Autowired // optional 
+	 // optional 
 	public EmployeeServiceImpl(EmployeeRepository employeeRepository) {
 		super();
 		this.employeeRepository = employeeRepository;
@@ -19,6 +18,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
 	public Employee saveEmployee(Employee employee) {
+    	
 		return employeeRepository.save(employee);
 	}
 }
