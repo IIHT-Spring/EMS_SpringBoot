@@ -39,6 +39,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 //		} else {
 //			throw new ResourceNotFoundException("Employee", "id", id);
 //		}
-		return employeeRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("employee", "id", id));
+		return employeeRepository.findById(id).orElseThrow(() -> 
+		new ResourceNotFoundException("employee", "id", id));
 	}
 }
